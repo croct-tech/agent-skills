@@ -1,0 +1,13 @@
+{
+  "name": "croct",
+  "description": "Agent skills for building with Croct: SDK integration, CLI, content modeling, CQL audiences, event tracking, personalization, and A/B testing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Croct",
+    "url": "https://croct.com"
+  },
+  "homepage": "https://github.com/croct-tech/agent-skills",
+  "repository": "https://github.com/croct-tech/agent-skills",
+  "license": "MIT",
+  "keywords": ["croct", "personalization", "ab-testing", "experimentation", "headless-cms", "cql", "nextjs", "react"]
+}

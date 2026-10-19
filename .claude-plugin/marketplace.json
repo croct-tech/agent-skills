@@ -1,0 +1,29 @@
+{
+  "name": "croct-agent-skills",
+  "owner": {
+    "name": "Croct",
+    "url": "https://croct.com"
+  },
+  "metadata": {
+    "description": "Croct plugin for Claude Code with agent skills and commands.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "croct",
+      "source": "./",
+      "description": "Agent skills for building with Croct: SDK integration, CLI, content modeling, CQL audiences, event tracking, personalization, and A/B testing.",
+      "version": "1.0.0",
+      "homepage": "https://github.com/croct-tech/agent-skills",
+      "repository": "https://github.com/croct-tech/agent-skills",
+      "license": "MIT",
+      "keywords": ["croct", "personalization", "ab-testing", "experimentation", "headless-cms", "cql"],
+      "author": {
+        "name": "Croct",
+        "url": "https://croct.com"
+      },
+      "category": "cms",
+      "tags": ["croct", "personalization", "ab-testing", "headless-cms", "cql"]
+    }
+  ]
+}

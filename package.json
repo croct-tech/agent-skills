@@ -1,0 +1,28 @@
+{
+  "name": "@croct/agent-skills",
+  "version": "1.0.0",
+  "description": "Agent skills for building with Croct.",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "validate": "tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/croct-tech/agent-skills.git"
+  },
+  "keywords": [
+    "croct",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "codex",
+    "personalization",
+    "ab-testing"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "croct",
+  "version": "1.0.0",
+  "description": "Agent skills for building with Croct: SDK integration, CLI, content modeling, CQL audiences, event tracking, personalization, and A/B testing.",
+  "author": {
+    "name": "Croct",
+    "url": "https://croct.com"
+  },
+  "homepage": "https://github.com/croct-tech/agent-skills",
+  "repository": "https://github.com/croct-tech/agent-skills",
+  "license": "MIT",
+  "keywords": ["croct", "personalization", "ab-testing", "experimentation", "headless-cms", "cql"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Croct",
+    "shortDescription": "Personalize content and run A/B tests with Croct",
+    "longDescription": "Integrate the Croct SDKs, drive the Croct CLI, model content, write CQL audiences, track events, and plan personalization and A/B tests directly from Codex.",
+    "developerName": "Croct",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://croct.com",
+    "defaultPrompt": [
+      "Add Croct to this project and render a hero slot",
+      "Create an audience for visitors from New York on mobile",
+      "Why is my slot showing the fallback content?"
+    ]
+  }
+}

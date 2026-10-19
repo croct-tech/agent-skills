@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "croct",
+  "version": "1.0.0",
+  "description": "Agent skills for building with Croct: SDK integration, CLI, content modeling, CQL audiences, event tracking, personalization, and A/B testing.",
+  "author": {
+    "name": "Croct",
+    "url": "https://croct.com"
+  },
+  "homepage": "https://github.com/croct-tech/agent-skills",
+  "repository": "https://github.com/croct-tech/agent-skills",
+  "keywords": [
+    "croct",
+    "personalization",
+    "ab-testing",
+    "experimentation",
+    "cms",
+    "cql"
+  ],
+  "license": "MIT"
+}
