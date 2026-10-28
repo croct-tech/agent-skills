@@ -11,7 +11,7 @@ description: >-
   (`croct://...`, `croct open`, `enable deep-link`), or writing, testing, and publishing CLI
   templates (`template.json5`, `croct use`, `croct create template`, template actions such as
   `create-resource`, `add-slot`, `download`, expressions `${options.name}`). Also when
-  `SlotContent<'home-hero@1'>` types or `slots.d.ts` are stale, or default content is outdated.
+  the `SlotContent` type generated for the slot `home-hero@1` or `slots.d.ts` is stale, or default content is outdated.
 ---
 
 # Drive the Croct CLI

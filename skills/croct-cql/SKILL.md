@@ -2,7 +2,7 @@
 name: croct-cql
 description: >-
   Use when writing, reading, reviewing, or debugging Croct's Contextual Query Language (CQL):
-  audience criteria, `croct.evaluate()` / `useEvaluation` / `<Personalization query>` / Next.js
+  audience criteria, `croct.evaluate()` / `useEvaluation` / the `Personalization` component / Next.js
   `cql` tag queries, Evaluation API `query` bodies (`/client/web/evaluate`,
   `/external/web/evaluate`), and dynamic content values (`"type": "dynamic"`, `"expression"`).
   Covers context variables (user, session, page, location, campaign, cart, device, browser,
