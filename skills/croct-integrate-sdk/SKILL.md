@@ -4,8 +4,8 @@ description: >-
   Use when installing or using a Croct SDK in application code: rendering slot content, evaluating
   CQL queries, server or client fetching, prerendering, identifying users, app ID / API key env
   vars, testing, or debugging. Covers JavaScript (`@croct/plug`, `croct.fetch`, `croct.evaluate`),
-  React (`@croct/plug-react`, `<CroctProvider>`, `useContent`, `<Slot>`, `useEvaluation`,
-  `useCroct`), Next.js (`@croct/plug-next`, `fetchContent`, `cql`, middleware/proxy,
+  React (`@croct/plug-react`, the `CroctProvider` component, `useContent`, the `Slot` component,
+  `useEvaluation`, `useCroct`), Next.js (`@croct/plug-next`, `fetchContent`, `cql`, middleware/proxy,
   `NEXT_PUBLIC_CROCT_APP_ID`, `CROCT_API_KEY`), Vue (`@croct/plug-vue`), Nuxt (`@croct/plug-nuxt`),
   Shopify Hydrogen (`@croct/plug-hydrogen`), PHP (`croct/plug-php`), Laravel, Symfony, and Drupal.
   Triggers: slot IDs like `home-hero@1`, `SlotContent`, "Croct is not plugged in", "initial
