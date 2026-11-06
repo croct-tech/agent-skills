@@ -110,6 +110,7 @@ update them yourself.
 | [`croct-personalize-and-test`](skills/croct-personalize-and-test/SKILL.md) | Plan experiences and experiments, feature flags, redirect tests, playbooks, and read analytics                                                      |
 | [`croct-use-api`](skills/croct-use-api/SKILL.md)                           | Call the content, evaluation, event tracking, and data export HTTP APIs                                                                             |
 | [`croct-integrate-platforms`](skills/croct-integrate-platforms/SKILL.md)   | Connect Storyblok, Sanity, Strapi, Shopify, VTEX, GTM, Clarity, HubSpot, and firmographics providers, or migrate from Mutiny and Ninetailed         |
+| [`croct-audit-website`](skills/croct-audit-website/SKILL.md)               | Audit a website and write a report, then create audiences, slots, and draft experiences with a CLI template                                         |
 
 ## How the skills stay accurate
 

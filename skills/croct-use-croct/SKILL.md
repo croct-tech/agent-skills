@@ -22,16 +22,17 @@ of an existing CMS (Storyblok, Sanity, Strapi) or commerce platform (Shopify, VT
 
 Load the one skill that matches the task, then add others only when the task crosses into them.
 
-| Task | Skill |
-| --- | --- |
-| Set up Croct in a project, `croct init`, add/remove slots or components, regenerate types or fallback content, edit `croct.json`, write CLI templates | `croct-use-cli` |
-| Render slot content, evaluate queries, identify users, prerender, test, or debug with an SDK (JavaScript, React, Next.js, Vue, Nuxt, Hydrogen, PHP, Laravel, Symfony, Drupal) | `croct-integrate-sdk` |
-| Design components and slots, write schema or content definition JSON, handle versioning and breaking changes, refactor components | `croct-model-content` |
-| Write, read, or debug CQL (audiences, `evaluate`, dynamic values) | `croct-cql` |
-| Track events and goals, set user/session attributes, identity, first-party proxy, ad blockers | `croct-track-events` |
-| Plan experiences and experiments, feature flags, redirect tests, playbooks, read analytics | `croct-personalize-and-test` |
-| Call Croct HTTP APIs directly (content, evaluation, event tracking, data export), API keys, tokens | `croct-use-api` |
-| Integrate with Storyblok, Sanity, Strapi, Shopify, VTEX, GTM, Clarity, HubSpot, firmographics providers, or migrate from Mutiny, Ninetailed | `croct-integrate-platforms` |
+| Task                                                                                                                                                                          | Skill                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| Set up Croct in a project, `croct init`, add/remove slots or components, regenerate types or fallback content, edit `croct.json`, write CLI templates                         | `croct-use-cli`              |
+| Render slot content, evaluate queries, identify users, prerender, test, or debug with an SDK (JavaScript, React, Next.js, Vue, Nuxt, Hydrogen, PHP, Laravel, Symfony, Drupal) | `croct-integrate-sdk`        |
+| Design components and slots, write schema or content definition JSON, handle versioning and breaking changes, refactor components                                             | `croct-model-content`        |
+| Write, read, or debug CQL (audiences, `evaluate`, dynamic values)                                                                                                             | `croct-cql`                  |
+| Track events and goals, set user/session attributes, identity, first-party proxy, ad blockers                                                                                 | `croct-track-events`         |
+| Plan experiences and experiments, feature flags, redirect tests, playbooks, read analytics                                                                                    | `croct-personalize-and-test` |
+| Call Croct HTTP APIs directly (content, evaluation, event tracking, data export), API keys, tokens                                                                            | `croct-use-api`              |
+| Integrate with Storyblok, Sanity, Strapi, Shopify, VTEX, GTM, Clarity, HubSpot, firmographics providers, or migrate from Mutiny, Ninetailed                                   | `croct-integrate-platforms`  |
+| Audit a website for personalization opportunities, write a report, then set up its audiences, slots, and draft experiences                                                    | `croct-audit-website`        |
 
 ## Default path for "add Croct to my project"
 
