@@ -74,32 +74,34 @@ Sending neither `X-Client-Id` nor `X-Token` where one is required returns `401 m
 
 ## Minimal calls
 
-Keep the API key in an environment variable; do not inline it or echo it.
+`<API KEY>` is a placeholder. To run a call, ask the user for the key; do not read it from
+environment variables, `.env` files, or other files on their machine, and do not echo it. In
+application code, load it from the app's own configuration (for example, `process.env`).
 
 ```bash
 # Personalized content from a backend
 curl -sS -X POST 'https://api.croct.io/external/web/content' \
   -H 'Content-Type: application/json' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   -H 'X-Client-Id: <CLIENT ID>' \
   -d '{"slotId": "home-hero"}'
 
 # Default (non-personalized) content from a backend
 curl -sS -X POST 'https://api.croct.io/external/web/static-content' \
   -H 'Content-Type: application/json' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   -d '{"slotId": "home-hero"}'
 
 # Evaluate a CQL expression from a backend
 curl -sS -X POST 'https://api.croct.io/external/web/evaluate' \
   -H 'Content-Type: application/json' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   -H 'X-Client-Id: <CLIENT ID>' \
   -d '{"query": "user is returning"}'
 
 # Export one page of events
 curl -sS -G 'https://api.croct.io/export/events' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   --data-urlencode 'pageSize=100'
 ```
 

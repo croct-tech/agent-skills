@@ -71,7 +71,7 @@ No `context`, no `previewToken`.
 ```bash
 curl -X POST 'https://api.croct.io/external/web/content' \
   -H 'Content-Type: application/json' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   -H 'X-Client-Id: <CLIENT ID>' \
   -H 'X-Token: <USER TOKEN>' \
   -H 'X-Client-Ip: 192.0.2.10' \
