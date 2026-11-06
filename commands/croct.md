@@ -16,9 +16,11 @@ I can help you build with Croct. These skills are available:
 - `croct-personalize-and-test` - Experiences, experiments, feature flags, playbooks, analytics.
 - `croct-use-api` - Content, evaluation, event tracking, and data export HTTP APIs.
 - `croct-integrate-platforms` - Storyblok, Sanity, Strapi, Shopify, VTEX, GTM, Clarity, HubSpot, firmographics, and migrations.
+- `croct-audit-website` - Audit of a website, then audiences, slots, and draft experiences in Croct.
 
 Just ask naturally, for example:
 
 > "Add Croct to this project and render a hero slot"
 > "Create an audience for visitors from New York on mobile"
 > "Why is my slot showing the fallback content?"
+> "Audit example.com and build a report"
