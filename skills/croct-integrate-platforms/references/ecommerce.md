@@ -106,7 +106,8 @@ preview environments.
 The user does this in Shopify admin: Settings > Customer events > Add custom pixel, name it `Croct`.
 Under Customer privacy, either set Permission to **Required** with **Analytics** (runs only for
 visitors who allow analytics) or **Not required** (runs for all). The user must decide based on the
-privacy laws where they sell. Replace the editor code with:
+privacy laws where they sell. Replace the editor code with the snippet below. Shopify runs it in
+its sandboxed pixel environment; it is not a shell or Node script, so never run it locally.
 
 ```js
 import('https://cdn.croct.io/plug-integration/shopify-pixel-tracker.js')

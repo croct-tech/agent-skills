@@ -73,7 +73,7 @@ Parameters:
 
 ```bash
 curl -sS -G 'https://api.croct.io/export/events' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   --data-urlencode 'start=1440990000000' \
   --data-urlencode 'end=1441076400000' \
   --data-urlencode 'pageSize=100' \
@@ -81,14 +81,14 @@ curl -sS -G 'https://api.croct.io/export/events' \
   --data-urlencode 'events=orderPlaced'
 
 curl -sS 'https://api.croct.io/export/events/924f6c8f-3b5b-47ea-b483-25a0506dc436' \
-  -H "X-Api-Key: $CROCT_API_KEY"
+  -H 'X-Api-Key: <API KEY>'
 
 curl -sS -G 'https://api.croct.io/export/session' \
-  -H "X-Api-Key: $CROCT_API_KEY" \
+  -H 'X-Api-Key: <API KEY>' \
   --data-urlencode 'pageSize=500'
 
 curl -sS 'https://api.croct.io/export/user/6d5f1fe8-3f21-4bce-9afb-e1d11b610674' \
-  -H "X-Api-Key: $CROCT_API_KEY"
+  -H 'X-Api-Key: <API KEY>'
 ```
 
 ```js
