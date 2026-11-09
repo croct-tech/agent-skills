@@ -19,8 +19,8 @@ Type-specific fields:
 
 - `tool`: name, category, `competitor` (true for A/B, personalization, and feature-flag tools).
 - `traffic`: monthly visits, channel percentages, countries.
-- `ad`: platform, library URL, text, CTA, destination URL, its `utm_*` values, linked landing
-  page finding.
+- `ad`: platform, library URL, text, CTA, destination URL or `not available`, its `utm_*`
+  values, linked landing page finding (only when the destination URL is known).
 - `page`: URL, role (home, pricing, product, industry, persona, use case, customers, blog, post,
   locale variant), what it sells, to whom, in which regions.
 - `signal`: playbook it supports (see the playbook table in `report-template.md`).
@@ -169,7 +169,9 @@ Manager, Clarity, and firmographics providers (see the `croct-integrate-platform
 ## 5. Find ads
 
 Open each library and read the first 1–2 pages, up to 12 ads per platform. Crop each ad card
-(about 840 px wide) and keep its text, CTA, and destination URL when shown.
+(about 840 px wide) and keep its text, CTA, and destination URL when shown. Google's library never
+shows the destination, Meta's shows it on some cards only, and LinkedIn's search results don't
+show it: record those as `not available`.
 
 | Platform  | URL                                                                                                                                                                       | How to find the account                                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -198,13 +200,15 @@ Open each library and read the first 1–2 pages, up to 12 ads per platform. Cro
 
 ## 6. Visit landing pages
 
-- Collect unique ad destinations. Record their `utm_source`, `utm_medium`, `utm_campaign`,
+- Collect the unique ad destinations the libraries showed. Record their `utm_source`, `utm_medium`, `utm_campaign`,
   `utm_content`, and `utm_term` values first: Phase 3 uses them for campaign audiences.
 - Strip tracking parameters, load each like step 1, and take a 1440 x 900 screenshot.
 - Compare the ad's promise (persona, industry, metric, offer, testimonial) with the landing
   page's hero. A mismatch is a candidate main blocker.
-- Without a destination, pair the ad with the homepage, and say in the report that the landing
-  page couldn't be confirmed.
+- Ads without a destination: don't pair them with the homepage or any other page, and don't
+  guess the destination from the ad's topic. Analyze only the ad's content (angle, persona,
+  industry, offer, CTA, campaign label) as evidence for segments and gaps, and say in the report
+  that the destination wasn't available in the library.
 - When Croct or another personalization tool is installed, loading the homepage with UTM values
   shows whether campaign traffic already gets different content. Only the UTM values recorded
   from real destinations prove anything; guessed values only show there's no catch-all

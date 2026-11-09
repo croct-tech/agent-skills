@@ -17,7 +17,7 @@ change to fixed text is `{slug}` in every Croct link's `utm_content`.
 | `{impact line}`      | Monetary estimate, only with all three user numbers                            |
 | `{campaigns}`        | Ad findings grouped by platform                                                |
 | `{gaps}`             | 2–3 paragraphs, one per gap                                                    |
-| `{screenshots}`      | Ad card next to its landing page; else the pages named in the gaps             |
+| `{screenshots}`      | Ad card next to its landing page when known; else the ad card or gap pages     |
 | `{segments}`         | 3–4 numbered items                                                             |
 | `{other segments}`   | Comma-separated list                                                           |
 | `{components}`       | 3 `####` sections                                                              |
@@ -208,7 +208,7 @@ One link per platform, then up to 4 ad images under each, in this order: LinkedI
 ```
 
 - Without screenshots, list each ad as a bullet: platform, headline or text quote, CTA, landing
-  page URL.
+  page URL, or `destination not available` when the library didn't show it.
 - Add the campaign or audience label LinkedIn shows under the headline ("Tier 1 & 2 Grocers") to
   the image alt text: it is evidence for the segments.
 - Platforms with no active ads: link the library and add `No active ads found.`
@@ -217,9 +217,11 @@ One link per platform, then up to 4 ad images under each, in this order: LinkedI
 
 ### What I noticed
 
-2–3 paragraphs. Each names the evidence: the ad's angle, the quoted headline, the page it lands
-on, and what the visitor sees instead. If the landing page couldn't be confirmed (step 6), say so
-in one sentence instead of assuming the ad opens the homepage. Example of the expected depth:
+2–3 paragraphs. Each names the evidence: the ad's angle, the quoted headline, and, only when the
+library showed the destination, the page it lands on and what the visitor sees there. When the
+destination wasn't available (step 6), base the gap on the ad's content alone, say in one sentence
+that the destination wasn't available in the library, and don't compare the ad with the homepage
+or any other page. Example of the expected depth, for ads with a known destination:
 
 > Active LinkedIn campaigns are heavily focused on specific personas, such as HR teams losing
 > time to manual processes or Internal Communicators dealing with printed documents. However,
@@ -235,10 +237,14 @@ Template examples of gap types (use as inspiration, never copy verbatim):
 - Mid-funnel content speaks to enterprise buyers while the product page speaks to SMBs.
 - Enterprise traffic from LinkedIn leaves because of generic messaging.
 
+Gap types that describe where ads land (the first, second, and last above) need a destination the
+library showed. Without one, write the gap about the ad's content instead.
+
 ### Screenshots
 
-Pair images: the ad card, then the landing page it leads to. Without ads, show the pages named
-in the gaps. With no screenshots at all, delete the `#### Screenshots` heading.
+Pair images: the ad card, then the landing page it leads to, only when the destination is known.
+Show ads without a destination alone, never next to the homepage or another page. Without ads,
+show the pages named in the gaps. With no screenshots at all, delete the `#### Screenshots` heading.
 
 ### Segments
 

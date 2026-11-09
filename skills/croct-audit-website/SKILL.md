@@ -55,7 +55,7 @@ evidence. Methods, fingerprints, URLs, and fallbacks for each step:
 | 3 | Detect the stack in 11 categories (framework, CMS, ecommerce, CDP, analytics, CRM/marketing automation, firmographics, tag manager, A/B and personalization, feature flags, consent) | `tool` findings with the matching signal             | Report "not detected"                            |
 | 4 | Map the stack to a Croct SDK and integrations                                                                                                                                        | Recommended SDK                                      | Default to `@croct/plug`                         |
 | 5 | Find ads in the Google, Meta, and LinkedIn libraries, up to 12 per platform                                                                                                          | `ad` findings with text, CTA, destination, card crop | Keep the library link; say "no active ads found" |
-| 6 | Visit each unique ad destination (record its `utm_*` values, then strip them)                                                                                                        | Ad and landing page pairs                            | Pair the ad with the homepage; say the landing page is unconfirmed |
+| 6 | Visit each unique ad destination the library shows (record its `utm_*` values, then strip them)                                                                                     | Ad and landing page pairs                            | No destination: analyze the ad content alone and say the destination wasn't available; never pair it with the homepage or another page |
 | 7 | Traffic: the user's numbers                                                                                                                                                          | `traffic` finding with its source                    | Omit the figure                                  |
 | 8 | Read content: what each page sells, to whom, where; sitewide signals for location, interests, organic, customers                                                                     | `signal` findings that quote the page                | Fewer segments                                   |
 | 9 | Inventory components (hero, announcement bar, nav, CTAs, card grids, testimonials, logo walls, pricing cards); crop each and judge how generic it is                                 | `component` findings                                 | Use "Home hero" and the main CTA only            |
@@ -63,7 +63,10 @@ evidence. Methods, fingerprints, URLs, and fallbacks for each step:
 Expect LinkedIn to block ad detail pages: read ads from the search results page instead (see
 step 5 in the reference). On Meta, an empty exact-phrase search is not proof of no ads: search
 by the page ID (`view_all_page_id`) first. The strongest finding is usually **an ad's promise compared with the page it lands on**. Spend
-effort there first. When there are no ads, look for organic, location, or interest findings
+effort there first, but only for ads whose destination the library shows: Google never shows it,
+Meta shows it on some cards only, and LinkedIn hides it. For the rest, use only the ad's own
+content (angle, persona, offer, CTA, campaign label) and say in the report that the destination
+wasn't available. When there are no ads, look for organic, location, or interest findings
 instead.
 
 Use domain knowledge to reason about the business, but tie every claim to captured content.
