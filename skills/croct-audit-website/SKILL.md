@@ -61,7 +61,8 @@ evidence. Methods, fingerprints, URLs, and fallbacks for each step:
 | 9 | Inventory components (hero, announcement bar, nav, CTAs, card grids, testimonials, logo walls, pricing cards); crop each and judge how generic it is                                 | `component` findings                                 | Use "Home hero" and the main CTA only            |
 
 Expect LinkedIn to block ad detail pages: read ads from the search results page instead (see
-step 5 in the reference). The strongest finding is usually **an ad's promise compared with the page it lands on**. Spend
+step 5 in the reference). On Meta, an empty exact-phrase search is not proof of no ads: search
+by the page ID (`view_all_page_id`) first. The strongest finding is usually **an ad's promise compared with the page it lands on**. Spend
 effort there first. When there are no ads, look for organic, location, or interest findings
 instead.
 

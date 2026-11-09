@@ -174,9 +174,18 @@ Open each library and read the first 1–2 pages, up to 12 ads per platform. Cro
 | Platform  | URL                                                                                                                                                                       | How to find the account                                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Google    | `https://adstransparency.google.com/?region=anywhere&domain=<domain>`                                                                                                     | By domain                                                                                                               |
-| Meta      | `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=<page-id>` | The page ID from the site's Facebook link (the library page shows it). Without a Facebook link, search the domain as an exact phrase: `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=%22<domain>%22&search_type=keyword_exact_phrase&media_type=all` |
+| Meta      | `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=<page-id>` | By page ID. Without it, search the domain as an exact phrase: `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=%22<domain>%22&search_type=keyword_exact_phrase&media_type=all`. If that finds nothing, find the page ID (below) before concluding there are no ads |
 | LinkedIn  | `https://www.linkedin.com/ad-library/search?companyIds=<company-id>`                                                                                                      | The numeric company ID behind the site's LinkedIn link. Without it, use `https://www.linkedin.com/ad-library/search?accountOwner=<name>` and keep only cards whose advertiser name matches exactly: the name search also returns similar names |
 
+- Meta page ID (`view_all_page_id`): the numeric ID of the company's Facebook page. The exact
+  phrase search misses ads whose text doesn't contain the domain, so an empty result there
+  doesn't mean there are no ads. Find the ID this way, then open the `view_all_page_id` URL:
+  1. Follow the site's Facebook and Instagram links, usually in the footer, to get the company's
+     page name.
+  2. In the ad library, search that name and pick the matching page from the suggestions: the
+     library URL then contains `view_all_page_id=<page-id>`.
+  3. Report "no active ads found" for Meta only when the `view_all_page_id` URL shows none. If
+     no page could be identified, say that Meta was checked by exact phrase only.
 - Libraries change markup and may show login walls or captchas. Don't log in or solve them;
   keep the library link and note that the platform couldn't be checked.
 - LinkedIn usually blocks automated access to ad detail pages (`/ad-library/detail/<id>`) with
