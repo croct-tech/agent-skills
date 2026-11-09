@@ -27,7 +27,7 @@ English; for another report language, see [Report language](#report-language).
 | `{first strategy}`   | Top segment × top component, one sentence                                      |
 | `{metrics}`          | 3 bullets from the metric list                                                 |
 | `{platform}`         | CMS or ecommerce platform; with none, `your current stack`                     |
-| `{playbooks}`        | 4–6 bullets from the playbook list                                             |
+| `{playbooks}`        | 4–6 bullets from the playbook list; fewer with weak evidence (see its rules)   |
 | `{compare}`          | One block from `compare-blocks.md` per detected competitor; omit when none     |
 
 ## Report language
@@ -310,6 +310,11 @@ say which segments see what.
 ### Playbook list (pick 4–6 with a supporting finding)
 
 Keep this order. Append `?{utm}` to every URL.
+
+Every playbook needs a supporting finding. When the site's evidence is too weak for 4, list only
+the supported ones (at least 1) and add one sentence right after the bullets saying so, for
+example: `I listed only the playbooks the public site gives evidence for; with more data (such as
+your traffic sources or campaign UTMs), others may apply.` Never add a playbook to reach 4.
 
 | Playbook              | Bullet                                                                                       | Pick when                                               |
 |-----------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------|

@@ -87,7 +87,8 @@ From the ledger, decide:
 - **First strategy**: the top segment combined with the top component, in one sentence. Never
   reuse the generic template example.
 - **Problems** (3–5) and **metrics** (3), picked from the template's lists.
-- **Playbooks**: 4–6 that a signal or ad finding supports.
+- **Playbooks**: 4–6 that a signal or ad finding supports. When the site's evidence is weak,
+  list fewer (at least 1) rather than padding, and say so explicitly in the report.
 
 Then fill the template exactly: [references/report-template.md](references/report-template.md).
 If you detected a competing A/B or personalization tool, add the matching block from
