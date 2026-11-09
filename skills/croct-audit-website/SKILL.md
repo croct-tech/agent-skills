@@ -33,6 +33,7 @@ Ask these in one message, then start. Never block on optional answers.
 | Website URL                                                        | Yes      | Audit target. Normalize to `https://<host>`; refuse `localhost`, private IPs, and intranet hosts. |
 | Monthly sessions, conversion rate (%), average order or lead value | No       | Impact figure. All three are needed for a monetary estimate.                                      |
 | Deliver as a file or in the chat?                                  | No       | Default: a file named `<slug>-croct-audit.md` in the current directory.                           |
+| Report language                                                    | No       | Default: English. When the site's main language differs (for example, Portuguese), offer it.      |
 
 Then check what you can do and tell the user in one line what will be skipped:
 
@@ -154,7 +155,9 @@ If they say yes, follow [references/setup-template.md](references/setup-template
 ## Do / Don't
 
 - Do label numbers. Show only figures you have.
-- Do keep the template's fixed text exactly, except `utm_content`, which is the company slug.
+- Do keep the template's fixed text exactly, except `utm_content`, which is the company slug. In
+  another report language, translate the fixed text faithfully instead (see "Report language"
+  in the template reference).
 - Do keep competitor tools out of "Current tech stack"; they belong in "How Croct compares".
 - Don't state anything about a vendor beyond the detected snippet and the linked public facts.
 - Don't invent ads, quotes, numbers, or customers. A missing finding becomes a shorter report or

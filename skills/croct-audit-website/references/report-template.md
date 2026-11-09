@@ -1,7 +1,8 @@
 # Report template
 
 Fill this template exactly. Text outside `{...}` is fixed: keep it word for word. The only
-change to fixed text is `{slug}` in every Croct link's `utm_content`.
+change to fixed text is `{slug}` in every Croct link's `utm_content`. The fixed text is in
+English; for another report language, see [Report language](#report-language).
 
 ## Placeholders
 
@@ -28,6 +29,21 @@ change to fixed text is `{slug}` in every Croct link's `utm_content`.
 | `{platform}`         | CMS or ecommerce platform; with none, `your current stack`                     |
 | `{playbooks}`        | 4–6 bullets from the playbook list                                             |
 | `{compare}`          | One block from `compare-blocks.md` per detected competitor; omit when none     |
+
+## Report language
+
+The report language comes from the intake (default: English). For any other language, such as
+Portuguese (Brazil) for Brazilian clients:
+
+- Translate all fixed text, including headings, callouts, the problem, metric, and playbook
+  lists, segment type labels, and fixed sentences from the rules ("No active ads found.",
+  "Croct is already installed."). Translate faithfully: same meaning, same claims, nothing added.
+- Write the placeholders in that language too.
+- Keep URLs, `{utm}` values, product and tool names, Markdown structure, and image paths
+  unchanged.
+- Keep quotes from the site and ads in their original language.
+- Write `{date}` in the language's usual format (`30 de jun. de 2026` in Portuguese).
+- Apply the same to the blocks from `compare-blocks.md`.
 
 UTM suffix used below as `{utm}`:
 
