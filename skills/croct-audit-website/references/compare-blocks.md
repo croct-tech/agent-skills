@@ -3,7 +3,8 @@
 Add this section only when step 3 detected an A/B testing, personalization, or feature-flag tool.
 Put it right before `## Next steps`. Use the shared heading and intro once, then one block per
 detected tool. These texts are written by Croct: use them as written and fill only the
-placeholders.
+placeholders. For a report in another language, translate them faithfully, as described in
+`report-template.md` (Report language), without adding claims.
 
 | Placeholder   | Value                                          |
 |---------------|------------------------------------------------|

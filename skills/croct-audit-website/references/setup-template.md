@@ -53,7 +53,7 @@ Build each audience from the evidence. Write and check the CQL with the `croct-c
 | Firmographic                | `user's industry is "Financial Services"`                             | Requires a firmographics integration (see `croct-integrate-platforms`) |
 | Location                    | `location's city's name is "New York"`                                | Regional pages, hreflang, ad targeting                                 |
 | Interest                    | `user's interests include "manufacturing"`                            | Industry, persona, or use-case URLs from the crawl                     |
-| Landing page                | `session's landingPage matches "pricing"`                             | Campaign landing page paths                                            |
+| Landing page                | `session's landingPage matches "pricing"`                             | Landing page paths of ad destinations the libraries showed; never guessed |
 | New or returning            | `user is not returning` / `user is returning`                         | Any site                                                               |
 | Customers                   | `user's stats' orders > 0 or user's activities include "login"`       | Requires those events to be tracked                                    |
 | Leads                       | `user's type is "lead"`                                               | Requires those events to be tracked                                    |

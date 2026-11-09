@@ -19,8 +19,8 @@ Type-specific fields:
 
 - `tool`: name, category, `competitor` (true for A/B, personalization, and feature-flag tools).
 - `traffic`: monthly visits, channel percentages, countries.
-- `ad`: platform, library URL, text, CTA, destination URL, its `utm_*` values, linked landing
-  page finding.
+- `ad`: platform, library URL, text, CTA, destination URL or `not available`, its `utm_*`
+  values, linked landing page finding (only when the destination URL is known).
 - `page`: URL, role (home, pricing, product, industry, persona, use case, customers, blog, post,
   locale variant), what it sells, to whom, in which regions.
 - `signal`: playbook it supports (see the playbook table in `report-template.md`).
@@ -169,14 +169,25 @@ Manager, Clarity, and firmographics providers (see the `croct-integrate-platform
 ## 5. Find ads
 
 Open each library and read the first 1–2 pages, up to 12 ads per platform. Crop each ad card
-(about 840 px wide) and keep its text, CTA, and destination URL when shown.
+(about 840 px wide) and keep its text, CTA, and destination URL when shown. Google's library never
+shows the destination, Meta's shows it on some cards only, and LinkedIn's search results don't
+show it: record those as `not available`.
 
 | Platform  | URL                                                                                                                                                                       | How to find the account                                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Google    | `https://adstransparency.google.com/?region=anywhere&domain=<domain>`                                                                                                     | By domain                                                                                                               |
-| Meta      | `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=<page-id>` | The page ID from the site's Facebook link (the library page shows it). Without a Facebook link, search the domain as an exact phrase: `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=%22<domain>%22&search_type=keyword_exact_phrase&media_type=all` |
+| Meta      | `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=<page-id>` | By page ID. Without it, search the domain as an exact phrase: `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=ALL&q=%22<domain>%22&search_type=keyword_exact_phrase&media_type=all`. If that finds nothing, find the page ID (below) before concluding there are no ads |
 | LinkedIn  | `https://www.linkedin.com/ad-library/search?companyIds=<company-id>`                                                                                                      | The numeric company ID behind the site's LinkedIn link. Without it, use `https://www.linkedin.com/ad-library/search?accountOwner=<name>` and keep only cards whose advertiser name matches exactly: the name search also returns similar names |
 
+- Meta page ID (`view_all_page_id`): the numeric ID of the company's Facebook page. The exact
+  phrase search misses ads whose text doesn't contain the domain, so an empty result there
+  doesn't mean there are no ads. Find the ID this way, then open the `view_all_page_id` URL:
+  1. Follow the site's Facebook and Instagram links, usually in the footer, to get the company's
+     page name.
+  2. In the ad library, search that name and pick the matching page from the suggestions: the
+     library URL then contains `view_all_page_id=<page-id>`.
+  3. Report "no active ads found" for Meta only when the `view_all_page_id` URL shows none. If
+     no page could be identified, say that Meta was checked by exact phrase only.
 - Libraries change markup and may show login walls or captchas. Don't log in or solve them;
   keep the library link and note that the platform couldn't be checked.
 - LinkedIn usually blocks automated access to ad detail pages (`/ad-library/detail/<id>`) with
@@ -189,13 +200,15 @@ Open each library and read the first 1–2 pages, up to 12 ads per platform. Cro
 
 ## 6. Visit landing pages
 
-- Collect unique ad destinations. Record their `utm_source`, `utm_medium`, `utm_campaign`,
+- Collect the unique ad destinations the libraries showed. Record their `utm_source`, `utm_medium`, `utm_campaign`,
   `utm_content`, and `utm_term` values first: Phase 3 uses them for campaign audiences.
 - Strip tracking parameters, load each like step 1, and take a 1440 x 900 screenshot.
 - Compare the ad's promise (persona, industry, metric, offer, testimonial) with the landing
   page's hero. A mismatch is a candidate main blocker.
-- Without a destination, pair the ad with the homepage, and say in the report that the landing
-  page couldn't be confirmed.
+- Ads without a destination: don't pair them with the homepage or any other page, and don't
+  guess the destination from the ad's topic. Analyze only the ad's content (angle, persona,
+  industry, offer, CTA, campaign label) as evidence for segments and gaps, and say in the report
+  that the destination wasn't available in the library.
 - When Croct or another personalization tool is installed, loading the homepage with UTM values
   shows whether campaign traffic already gets different content. Only the UTM values recorded
   from real destinations prove anything; guessed values only show there's no catch-all
